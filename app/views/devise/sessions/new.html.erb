@@ -1,0 +1,38 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<div class="wrapper fadeInDown">
+  <div id="formContent">
+    <!-- Tabs Titles -->
+   
+
+    <!-- Icon -->
+    <div class="fadeIn first">
+      <img src="https://oxschool.edu.mx/img/logo-oxford-school.png" id="icon" alt="User Icon" />
+    </div>
+
+    <!-- Login Form -->
+ 
+    <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: {class: "form-signin"}) do |f| %>
+      <div class="fadeIn second",class="input-group mb-3">
+        <%= f.text_field :email, class: "form-control", placeholder: "Email" %>
+       </div>
+      
+      <div class="fadeIn third">
+        <%= f.text_field :password, class: "form-control", placeholder: "Password" %>
+      </div>
+    
+      <div class="fadeIn fourth">
+        <%= f.submit "Log in" %>
+      </div>
+    <% end %>
+
+    
+  
+
+
+   
+  </div>
+</div>
