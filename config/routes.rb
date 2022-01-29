@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  get 'user/index'
+  get 'admin/index'
+  get 'home/admin'
   devise_for :users, :controllers => { :registrations => "users/registrations" } 
-  root 'home#index'
+  root 'home#adminouser'
   
 end
